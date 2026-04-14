@@ -70,7 +70,8 @@ img{max-width:100%;height:auto;display:block}
 .section-title{font-size:28px;font-weight:800;text-align:center;margin:48px 0 32px;color:var(--primary);position:relative}
 .section-title::after{content:"";display:block;width:60px;height:4px;background:var(--accent);margin:12px auto 0;border-radius:2px}
 .ranking{padding:20px 0 40px}
-.rank-card{background:#fff;border-radius:12px;box-shadow:0 4px 16px rgba(15,23,42,.08);padding:28px;margin-bottom:28px;display:grid;grid-template-columns:100px 1fr;gap:24px;position:relative;border-top:4px solid var(--primary)}
+.rank-card{background:#fff;border-radius:12px;box-shadow:0 4px 16px rgba(15,23,42,.08);padding:28px;margin-bottom:28px;display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;position:relative;border-top:4px solid var(--primary)}
+.rank-body{min-width:0}
 .rank-card.rank-1{border-top-color:#F59E0B}
 .rank-card.rank-2{border-top-color:#94A3B8}
 .rank-card.rank-3{border-top-color:#B45309}
@@ -81,8 +82,8 @@ img{max-width:100%;height:auto;display:block}
 .rank-name{font-size:22px;color:var(--primary);margin-bottom:8px}
 .rank-stars{color:var(--gold);font-size:18px;margin-bottom:12px}
 .rank-rating-num{color:var(--muted);font-size:14px;margin-left:8px}
-.rank-spec{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;background:#F1F5F9;padding:14px;border-radius:8px;margin:12px 0}
-.rank-spec li{font-size:13px;color:var(--muted)}
+.rank-spec{list-style:none;display:flex;flex-wrap:wrap;gap:12px;background:#F1F5F9;padding:14px;border-radius:8px;margin:12px 0}
+.rank-spec li{font-size:13px;color:var(--muted);flex:1 1 140px;min-width:0;word-break:keep-all;overflow-wrap:anywhere}
 .rank-spec strong{display:block;color:var(--text);font-size:15px;margin-top:2px}
 .rank-desc{color:var(--muted);font-size:14px;margin:12px 0}
 .comparison{padding:20px 0 40px;background:#fff}
@@ -113,7 +114,8 @@ img{max-width:100%;height:auto;display:block}
 .hero-inner{grid-template-columns:1fr}.hero-title{font-size:24px}
 .rank-card{grid-template-columns:1fr;padding:20px}
 .rank-badge{margin:0 auto}
-.rank-spec{grid-template-columns:1fr}
+.rank-spec{flex-direction:column}
+.rank-spec li{flex:1 1 auto}
 .global-nav{display:none}
 .section-title{font-size:22px}
 }
