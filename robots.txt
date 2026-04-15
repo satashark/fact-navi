@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fact-navi.com/sitemap.xml
